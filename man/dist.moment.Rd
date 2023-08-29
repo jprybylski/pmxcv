@@ -17,6 +17,8 @@ dist.moment(
 \item{...}{passed to moment()}
 
 \item{exact}{If there is an exact moment generating function, use that. Default TRUE only for log}
+
+\item{lambda}{shape parameter for nonmemboxcox()}
 }
 \value{
 moment

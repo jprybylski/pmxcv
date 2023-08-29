@@ -36,3 +36,17 @@ test_that("nonmem box-cox is reversible", {
 
   testthat::expect_equal(median(test_x), median(indiv_params_para))
 })
+
+test_that("nonmem box-cox is log-transform when lamda=0", {
+
+  test_val <- runif(1, 0.1, 100)
+  test_transform <- nonmemboxcox(test_val, lambda=0, theta=1)
+
+  testthat::expect_equal(test_transform, log(test_val))
+
+  test_val2 <- log(test_val)
+  test_transform2 <- nonmemboxcox(test_val2, lambda=0, theta=1, inv=TRUE)
+
+  testthat::expect_equal(test_transform2, test_val)
+
+})

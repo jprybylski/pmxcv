@@ -8,7 +8,8 @@ dist.intcv(
   dist = "log",
   ...,
   exact = ifelse(dist == "log", TRUE, FALSE),
-  lambda = NULL
+  lambda = NULL,
+  fun = FALSE
 )
 }
 \arguments{
@@ -17,6 +18,10 @@ dist.intcv(
 \item{...}{passed to moment()}
 
 \item{exact}{If there is an exact moment generating function, use that. Default TRUE only for log}
+
+\item{lambda}{shape parameter for nonmemboxcox()}
+
+\item{fun}{return function (for use in invcv())}
 }
 \value{
 Percent CV

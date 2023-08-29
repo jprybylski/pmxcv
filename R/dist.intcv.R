@@ -24,9 +24,9 @@ dist.intcv <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambd
   } else if (dist == "arcsin") {
     out <- intcv(...,pdist = function(x) sin(x)^2,qdist= function(x) asin(sqrt(x)))
   } else if (dist == "nmboxcox") {
-    if (lambda>0) message("For lambda>0, NM-style transform tends to infinity.")
-    qbxcxt <- function(x) nonmemboxcox(x,lambda)
-    pbxcxt <- function(x) nonmemboxcox(x,lambda,inv=TRUE)
+    list2env(list(...), environment())
+    qbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u)
+    pbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u,inv=TRUE)
     out <- intcv(...,pdist = pbxcxt,qdist= qbxcxt)
   }
   if (is.null(out)) stop(sprintf("Distribution %s not built into package.", dist))
