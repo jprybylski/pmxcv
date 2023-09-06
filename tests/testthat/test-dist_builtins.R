@@ -116,7 +116,8 @@ test_that("built-in moments/cv%s are comparable to numeric moments/cv%s", {
   expect_equal(test_logitcv,logit_intcv)
   fun.logcv <- dist.intcv("log", fun=TRUE)
   test_logcv <-  fun.logcv(v=rand_var)
-  expect_equal(test_logitcv,logit_intcv)
+  lnorm_intcv <- dist.intcv("log", v=rand_var)
+  expect_equal(test_logcv,lnorm_intcv)
 
   # missing builtin errors
   expect_error(dist.moment("binomial", u=1, v=rand_var, n=1))

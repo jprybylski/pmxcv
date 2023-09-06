@@ -1,5 +1,5 @@
 System information for \\AMRL20N3F1BBH9L:
-Uptime:                    3 days 1 hour 11 minutes 23 seconds
+Uptime:                    1 day 2 hours 56 minutes 27 seconds
 Kernel version:            Windows 10 Enterprise, Multiprocessor Free
 Product type:              Professional
 Product version:           6.3
