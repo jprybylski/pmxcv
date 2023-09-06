@@ -30,7 +30,7 @@ devtools::install_github("pfizer-rd/pmxcv")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Example of a typical use case:
 
 ```{r example}
 library(pmxcv)

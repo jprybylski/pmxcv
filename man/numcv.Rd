@@ -17,3 +17,8 @@ Percent cv
 \description{
 Numeric CV\% of a sample
 }
+\examples{
+test_x <- rnorm(1000, mean=50, sd=5)
+cv <- numcv(test_x)
+cv # expect ~ 10(\%)
+}

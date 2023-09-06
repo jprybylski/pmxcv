@@ -16,6 +16,7 @@ dist.intcv <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambd
   if (dist=="log") {
     list2env(list(...), environment())
     if (exact) out <- 100*sqrt(exp(v) - 1)
+    else if ("u" %in% names(list(...))) out <- intcv(...,pdist = exp,qdist= log)
     else out <- intcv(...,u=1,pdist = exp,qdist= log)
   } else if (dist == "logexp") {
     out <- intcv(...,pdist = function(x) exp(x) - 1,qdist= function(x) log(x+1))
@@ -25,8 +26,8 @@ dist.intcv <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambd
     out <- intcv(...,pdist = function(x) sin(x)^2,qdist= function(x) asin(sqrt(x)))
   } else if (dist == "nmboxcox") {
     list2env(list(...), environment())
-    qbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u)
-    pbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u,inv=TRUE)
+    qbxcxt <- function(x) nonmemboxcox(x,lambda=lambda, theta = u)
+    pbxcxt <- function(x) nonmemboxcox(x,lambda=lambda, theta = u,inv=TRUE)
     out <- intcv(...,pdist = pbxcxt,qdist= qbxcxt)
   }
   if (is.null(out)) stop(sprintf("Distribution %s not built into package.", dist))

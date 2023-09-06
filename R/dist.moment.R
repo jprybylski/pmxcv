@@ -14,7 +14,7 @@ dist.moment <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lamb
   if (dist=="log") {
     list2env(list(...), environment())
     if (exact) out <- exp(n*log(u) + (n^2)*v/2) # u expected for exact
-    else out <- moment(...,u=1,pdist = exp,qdist= log)
+    else out <- moment(...,pdist = exp,qdist= log)
   } else if (dist == "logexp") {
     out <- moment(...,pdist = function(x) exp(x) - 1,qdist= function(x) log(x+1))
   } else if (dist == "logit") {
@@ -23,8 +23,8 @@ dist.moment <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lamb
     out <- moment(...,pdist = function(x) sin(x)^2,qdist= function(x) asin(sqrt(x)))
   } else if (dist == "nmboxcox") {
     list2env(list(...), environment())
-    qbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u)
-    pbxcxt <- function(x) nonmemboxcox(x,lambda, theta = u,inv=TRUE)
+    qbxcxt <- function(x) nonmemboxcox(x,lambda=lambda, theta = u)
+    pbxcxt <- function(x) nonmemboxcox(x,lambda=lambda, theta = u,inv=TRUE)
     out <- moment(...,pdist = pbxcxt,qdist= qbxcxt)
   }
   if (is.null(out)) stop(sprintf("Distribution %s not built into package.", dist))
