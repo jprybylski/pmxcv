@@ -1,5 +1,5 @@
 Package: pmxcv
-Title: Integration-based Ceofficients of Variance
+Title: Integration-based Coefficients of Variance
 Version: 0.0.0.1
 Authors@R: 
     person("John", "Prybylski", , "john.prybylski@pfizer.com", role = c("aut", "cre"),

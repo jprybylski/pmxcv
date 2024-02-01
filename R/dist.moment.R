@@ -8,6 +8,8 @@
 #' @return moment
 #' @export
 #'
+#' @importFrom stats plogis qlogis
+#'
 #' @examples
 dist.moment <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambda=NULL) {
   out <- NULL

@@ -8,6 +8,8 @@
 #' @return Best-fit variance
 #' @export
 #'
+#' @importFrom stats optim
+#'
 #' @examples
 invcv <- function(cvfun,cv,verbose=FALSE,...) {
   # given cv function and cv, find omega

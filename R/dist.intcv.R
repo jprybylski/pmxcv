@@ -9,6 +9,8 @@
 #' @return Percent CV
 #' @export
 #'
+#' @importFrom stats plogis qlogis
+#'
 #' @examples
 dist.intcv <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambda=NULL,fun=FALSE) {
   if (fun) return(function(...) dist.intcv(dist=dist, ...))

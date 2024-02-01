@@ -1,4 +1,5 @@
 test_that("built-in moments/cv%s are comparable to numeric moments/cv%s", {
+  set.seed(652)
   samp_n <- 10^6
   rand_var <- runif(1, 0.3, 3)
   norm_vals <- rnorm(samp_n, sd=sqrt(rand_var))

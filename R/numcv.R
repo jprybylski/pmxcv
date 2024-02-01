@@ -6,6 +6,8 @@
 #' @return Percent cv
 #' @export
 #'
+#' @importFrom stats sd
+#'
 #' @examples
 #' test_x <- rnorm(1000, mean=50, sd=5)
 #' cv <- numcv(test_x)
