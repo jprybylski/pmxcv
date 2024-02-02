@@ -1,0 +1,8 @@
+bibentry(
+  bibtype  = "Article",
+  title    = "Reporting Coefficient of Variation for Logit, Box-Cox and Other Non-log-normal Parameters",
+  author   = c(person("John", "Prybylski", , "john.prybylski@pfizer.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5802-0539"))),
+  journal  = "Clinical Pharmacokinetics",
+  year     = 2024,
+  doi      = "10.1007/s40262-023-01343-2"
+)
