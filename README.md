@@ -22,7 +22,7 @@ devtools::install_github("pfizer-rd/pmxcv")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Example of a typical use case:
 
 ``` r
 library(pmxcv)
@@ -41,7 +41,7 @@ logit_theta <- log(theta_bio) - log( 1 - theta_bio )
 indiv_bios <- 1 / ( 1 + 1/exp( logit_theta + eta_sample ) )
 expected_cv <- 100*sd(indiv_bios)/mean(indiv_bios)
 expected_cv
-#> [1] 31.3978
+#> [1] 31.39837
 
 ## Lognormal reported CV% (erroneous)
 bio_cv_lnorm <- 100*sqrt(exp(omega_bio) - 1)
@@ -50,6 +50,6 @@ bio_cv_lnorm
 
 ## Logitnormal reported CV%
 bio_cv_lgtnorm <- dist.intcv("logit", u=theta_bio, v=omega_bio)
-bio_cv_lgtnorm
+bio_cv_lgtnorm # should be approximately equal to numeric
 #> [1] 31.39758
 ```

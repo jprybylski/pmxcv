@@ -56,6 +56,6 @@ bio_cv_lnorm
 
 ## Logitnormal reported CV%
 bio_cv_lgtnorm <- dist.intcv("logit", u=theta_bio, v=omega_bio)
-bio_cv_lgtnorm
+bio_cv_lgtnorm # should be approximately equal to numeric
 
 ```
