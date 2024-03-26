@@ -19,6 +19,9 @@ moment_f(x, u, v, n, pdist, qdist)
 
 \item{qdist}{transform function (eg, log())}
 }
+\value{
+Point result of the moment function
+}
 \description{
 Integratable moment function
 }

@@ -7,7 +7,7 @@
 #' @param pdist un-transform function for transformed random variable (eg, exp())
 #' @param qdist transform function (eg, log())
 #'
-#' @return
+#' @return Point result of the moment function
 #' @export
 #'
 #' @examples
