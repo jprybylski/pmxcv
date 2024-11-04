@@ -17,7 +17,13 @@ parameter; this package attempts to provide an alternative approach.
 You can install the development version of pmxcv like so:
 
 ``` r
-devtools::install_github("pfizer-rd/pmxcv")
+devtools::install_github("jprybylski/pmxcv")
+```
+
+Or from CRAN:
+
+``` r
+install.packages("pmxcv")
 ```
 
 ## Example
@@ -36,12 +42,12 @@ omega_bio <- 1.2
 # F1 = 1/( 1 + 1/EXP( LOGITF1 + ETA(BIO) )
 
 ## Numeric parameter variability
-eta_sample <- rnorm(10^9, sd=sqrt(omega_bio))
+eta_sample <- rnorm(10^6, sd=sqrt(omega_bio))
 logit_theta <- log(theta_bio) - log( 1 - theta_bio )
 indiv_bios <- 1 / ( 1 + 1/exp( logit_theta + eta_sample ) )
 expected_cv <- 100*sd(indiv_bios)/mean(indiv_bios)
 expected_cv
-#> [1] 31.39837
+#> [1] 31.40786
 
 ## Lognormal reported CV% (erroneous)
 bio_cv_lnorm <- 100*sqrt(exp(omega_bio) - 1)
