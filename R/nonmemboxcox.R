@@ -17,6 +17,7 @@
 #' @examples
 nonmemboxcox <- function(x,lambda,theta=1,inv=FALSE) {
   if (!inv) {
+    #message("Q attempt x {x}, lambda {lambda}, theta {theta}")
     normalized <- x/theta
     {
       if (lambda==0) bc1 <- log(normalized)
@@ -24,6 +25,7 @@ nonmemboxcox <- function(x,lambda,theta=1,inv=FALSE) {
     }
     return( log(theta) + bc1 )
   } else {
+    #message("P attempt x {x}, lambda {lambda}, theta {theta}")
     normalized <- x - log(theta)
     {
       if (lambda==0) bc1 <- exp(normalized)

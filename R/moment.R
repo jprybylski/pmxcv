@@ -8,5 +8,5 @@
 #' @examples
 moment <- function(...) {
   int_f <- function(x) moment_f(x,...)
-  stats::integrate(int_f, -Inf, Inf, abs.tol = 0)$value
+  stats::integrate(int_f, -Inf, Inf, abs.tol = 0, stop.on.error = FALSE)$value
 }

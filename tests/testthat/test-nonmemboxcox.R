@@ -17,7 +17,11 @@ test_that("nonmem box-cox transforms as expected from reference", {
 
   test_vals <- nonmemboxcox(indiv_params_para, lambda = lambda_test, theta=pop_param)
 
-  testthat::expect_equal(median(test_vals), median(indiv_transformed))
+  # indiv_transformed is more susceptible to infinite values
+  test_vals <- test_vals[is.finite(indiv_transformed)]
+  indiv_transformed <- indiv_transformed[is.finite(indiv_transformed)]
+
+  testthat::expect_equal(test_vals, indiv_transformed)
 
 })
 
