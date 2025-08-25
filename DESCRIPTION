@@ -1,14 +1,14 @@
 Package: pmxcv
 Title: Integration-Based Coefficients of Variation
-Version: 0.0.1.0
+Version: 0.0.2
 Authors@R: 
-    person("John", "Prybylski", , "john.prybylski@pfizer.com", role = c("aut", "cre"),
+    person("John", "Prybylski", , "jprybylski@gmail.com", role = c("aut", "cre","cph"),
            comment = c(ORCID = "0000-0001-5802-0539"))
 Description: Estimate coefficient of variation percent (CV%) for any arbitrary distribution, including some built-in estimates for commonly-used transformations in pharmacometrics. Methods are described in various sources, but applied here as summarized in: Prybylski, (2024) <doi:10.1007/s40262-023-01343-2>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
