@@ -25,3 +25,7 @@ this means the parameter is neither Box-Cox distributed nor lognormally-distribu
 To get the "Box-Cox Transform" as it would be relevant for CV\% calculation, these properties
 have to be considered.
 }
+\examples{
+y <- nonmemboxcox(1.5, lambda = 0.5, theta = 1)
+nonmemboxcox(y, lambda = 0.5, theta = 1, inv = TRUE)
+}

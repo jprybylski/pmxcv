@@ -26,3 +26,7 @@ moment
 \description{
 Built-in moment functions
 }
+\examples{
+dist.moment("log", u = 2, v = 0.2, n = 2)
+dist.moment("logit", u = 0.5, v = 0.2, n = 1)
+}

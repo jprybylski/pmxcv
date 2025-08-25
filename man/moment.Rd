@@ -15,3 +15,6 @@ moment
 \description{
 Moment function
 }
+\examples{
+moment(n = 3, u = 1, v = 0.2, pdist = exp, qdist = log)
+}

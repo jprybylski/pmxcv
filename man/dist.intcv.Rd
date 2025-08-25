@@ -29,3 +29,7 @@ Percent CV
 \description{
 Built-in integration-based \%CV functions
 }
+\examples{
+dist.intcv("log", v = 0.2)
+dist.intcv("logit", u = 0.5, v = 0.3)
+}
