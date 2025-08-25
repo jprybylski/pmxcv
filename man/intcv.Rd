@@ -15,3 +15,6 @@ Percent CV
 \description{
 Integration-based CV\%
 }
+\examples{
+intcv(u = 1, v = 0.2, pdist = exp, qdist = log)
+}

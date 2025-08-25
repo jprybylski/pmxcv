@@ -11,6 +11,8 @@
 #' @importFrom stats plogis qlogis
 #'
 #' @examples
+#' dist.moment("log", u = 2, v = 0.2, n = 2)
+#' dist.moment("logit", u = 0.5, v = 0.2, n = 1)
 dist.moment <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambda=NULL) {
   out <- NULL
   if (dist=="log") {

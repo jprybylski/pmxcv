@@ -12,6 +12,8 @@
 #' @importFrom stats plogis qlogis
 #'
 #' @examples
+#' dist.intcv("log", v = 0.2)
+#' dist.intcv("logit", u = 0.5, v = 0.3)
 dist.intcv <- function(dist="log",...,exact=ifelse(dist=="log",TRUE,FALSE),lambda=NULL,fun=FALSE) {
   if (fun) return(function(...) dist.intcv(dist=dist, ...))
   out <- NULL

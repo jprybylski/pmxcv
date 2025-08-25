@@ -15,6 +15,8 @@
 #' @export
 #'
 #' @examples
+#' y <- nonmemboxcox(1.5, lambda = 0.5, theta = 1)
+#' nonmemboxcox(y, lambda = 0.5, theta = 1, inv = TRUE)
 nonmemboxcox <- function(x,lambda,theta=1,inv=FALSE) {
   if (!inv) {
     normalized <- x/theta

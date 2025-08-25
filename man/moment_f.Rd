@@ -25,3 +25,6 @@ Point result of the moment function
 \description{
 Integratable moment function
 }
+\examples{
+moment_f(0, u = 1, v = 0.2, n = 1, pdist = exp, qdist = log)
+}

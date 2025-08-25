@@ -21,3 +21,7 @@ Best-fit variance
 \description{
 Variance from CV\%
 }
+\examples{
+logcv <- dist.intcv("log", fun = TRUE)
+invcv(logcv, cv = 30)
+}

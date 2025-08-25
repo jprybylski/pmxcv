@@ -11,6 +11,8 @@
 #' @importFrom stats optim
 #'
 #' @examples
+#' logcv <- dist.intcv("log", fun = TRUE)
+#' invcv(logcv, cv = 30)
 invcv <- function(cvfun,cv,verbose=FALSE,...) {
   # given cv function and cv, find omega
   ssq <- function(x) {

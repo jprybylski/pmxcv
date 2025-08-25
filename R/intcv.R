@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' intcv(u = 1, v = 0.2, pdist = exp, qdist = log)
 intcv <- function(...) {
   mom1 <- moment(n=1,...)
   mom2 <- moment(n=2,...)

@@ -11,6 +11,7 @@
 #' @export
 #'
 #' @examples
+#' moment_f(0, u = 1, v = 0.2, n = 1, pdist = exp, qdist = log)
 moment_f <- function(x,u,v,n,pdist,qdist) {
   mu <- qdist(u) # u provided in natural units
   sigma <- sqrt(v)
